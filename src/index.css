@@ -1,9 +1,67 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
   --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+
+  /* Display Temperature */
+
+  --text-display: 96px;
+  --text-display--line-height: 100%;
+  --text-display--letter-spacing: -2px;
+  --text-display--font-weight: 600;
+  --text-display--font-family: var(--font-sans);
+
+  /* Page Heading */
+
+  --text-heading-page: 52px;
+  --text-heading-page--line-height: 120%;
+  --text-heading-page--font-weight: 700;
+  --text-heading-page--font-family: var(--font-display);
+
+  /* Stat / Value Text */
+
+  --text-stat: 32px;
+  --text-stat--line-height: 100%;
+  --text-stat--font-weight: 300;
+  --text-stat--font-family: var(--font-sans);
+
+  /* Medium Heading */
+
+  --text-heading-md: 28px;
+  --text-heading-md--line-height: 120%;
+  --text-heading-md--font-weight: 700;
+  --text-heading-md--font-family: var(--font-sans);
+
+  /* Small Heading */
+
+  --text-heading-sm: 20px;
+  --text-heading-sm--line-height: 120%;
+  --text-heading-sm--font-weight: 600;
+  --text-heading-sm--font-family: var(--font-sans);
+
+  /* Label / Subheading */
+
+  --text-label: 18px;
+  --text-label--line-height: 120%;
+  --text-label--font-weight: 500;
+  --text-label--font-family: var(--font-sans);
+
+  /* Small Body */
+
+  --text-body-sm: 16px;
+  --text-body-sm--line-height: 120%;
+  --text-body-sm--font-weight: 500;
+  --text-body-sm--font-family: var(--font-sans);
+
+  /* Small Label */
+
+  --text-label-sm: 14px;
+  --text-label-sm--line-height: 120%;
+  --text-label-sm--font-weight: 500;
+  --text-label-sm--font-family: var(--font-sans);
+
+  /* Colors */
 
   --color-neutral-900: hsl(243, 96%, 9%);
   --color-neutral-800: hsl(243, 27%, 20%);
@@ -12,38 +70,30 @@
   --color-neutral-300: hsl(240, 6%, 70%);
   --color-neutral-200: hsl(250, 6%, 84%);
   --color-neutral-0: hsl(0, 0%, 100%);
-
   --color-orange-500: hsl(28, 100%, 52%);
-
   --color-blue-500: hsl(233, 67%, 56%);
   --color-blue-700: hsl(248, 70%, 36%);
 
-  --text-base: 1.125rem;
+  /*  Semantic Colors */
+
+  --color-page: var(--color-neutral-900);
+  --color-surface: var(--color-neutral-800);
+  --color-surface-alt: var(--color-neutral-700);
+
+  --color-dropdown: var(--color-neutral-600);
+
+  --color-input: var(--color-neutral-800);
+  --color-input-active: var(--color-neutral-700);
+
+  --color-fg: var(--color-neutral-0);
+  --color-fg-muted: var(--color-neutral-300);
+
+  --color-button: var(--color-blue-500);
+  --color-button-hover: var(--color-blue-700);
 }
 
 @layer base {
   body {
-    @apply bg-neutral-900 text-neutral-0 font-sans antialiased;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    @apply font-display;
-  }
-}
-
-@layer components {
-  .heading-page {
-    @apply font-display font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl;
-  }
-
-  .heading-section {
-    @apply font-display font-semibold text-xl md:text-2xl;
-  }
-
-  .heading-label {
-    @apply font-display font-medium text-sm md:text-base;
+    @apply bg-page text-fg font-sans antialiased;
   }
 }
