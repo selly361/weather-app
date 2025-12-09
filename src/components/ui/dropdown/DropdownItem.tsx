@@ -5,9 +5,10 @@ interface OptionProps {
   active?: boolean
   children: ReactNode
   onClick?: () => void
+  showCheckmark?: boolean
 }
 
-export function DropdownItem({ active, children, onClick }: OptionProps) {
+export function DropdownItem({ active, children, onClick, showCheckmark = true }: OptionProps) {
   return (
     <button
       onClick={onClick}
@@ -17,7 +18,7 @@ export function DropdownItem({ active, children, onClick }: OptionProps) {
       `}
     >
       {children}
-      {active && <CheckmarkIcon />}
+      {active && showCheckmark && <CheckmarkIcon />}
     </button>
   ) 
 }
